@@ -6,5 +6,9 @@
     {
         "id": 2,
         "image": "/assets/slider-2.png"
+    },
+    {
+        "id": 3,
+        "image": "/assets/slider-4.jpg"
     }
 ]

@@ -12,9 +12,9 @@ const navItems = [
 
 const Navbar = () => {
     return (
-        <nav className="h-18 flex items-center justify-between mx-3 lg:mx-36">
+        <nav className="h-18 flex items-center justify-between mx-3 lg:mx-34">
             <div>
-                <h1 className="text-2xl">Elegant</h1>
+                <h1 className="text-2xl">Luminette</h1>
             </div>
             <div>
                 <ul className="hidden md:flex gap-8">
