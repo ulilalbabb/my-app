@@ -20,7 +20,8 @@ const MainCard = () => {
                     width={300} 
                     height={300}
                     alt="Chair" 
-                    className="mt-auto" />
+                    className="mt-auto" 
+                />
             </div>
 
             {/* Bedroom */}
@@ -37,9 +38,11 @@ const MainCard = () => {
                 </div>
                 <Image 
                     src="/assets/2.png" 
-                    width={300} 
-                    height={300}
-                    alt="Drawer" className="mt-auto" />
+                    width={400} 
+                    height={400}
+                    alt="Drawer" 
+                    className="mt-auto" 
+                />
             </div>
 
             {/* Kitchen */}
@@ -54,10 +57,12 @@ const MainCard = () => {
                     </Link>
                 </div>
                 <Image 
-                    src="/assets/2.png" 
-                    width={300} 
-                    height={300}
-                    alt="Toaster" className="mt-auto" />
+                    src="/assets/3.png" 
+                    width={400} 
+                    height={400}
+                    alt="Toaster" 
+                    className="mt-auto" 
+                />
             </div>
         </div>
     )
