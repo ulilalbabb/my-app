@@ -5,4 +5,5 @@ export type AuthType = {
     id: string;
     onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
     value: string;
+    label?: string
 }

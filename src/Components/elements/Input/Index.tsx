@@ -2,11 +2,11 @@ import Label from "./LabelForm"
 import { AuthType } from "@/src/types/auth.type"
 import Input from "./Input"
 
-const InputForm = ( {type, placeholder, name, id, onChange, value}: AuthType) => {
+const InputForm = ( {type, placeholder, name, label, id, onChange, value}: AuthType) => {
     return (
         <div>
             <Label htmlfor={name}>
-                {placeholder}
+                {label}
             </Label>
             <Input 
                 type={type}
@@ -15,6 +15,7 @@ const InputForm = ( {type, placeholder, name, id, onChange, value}: AuthType) =>
                 id={id}
                 onChange={onChange}
                 value={value}
+                label={label}
             />
         </div>
     )

@@ -5,7 +5,7 @@ const Input = ( {type, placeholder, name, id, onChange, value}: AuthType) => {
         <input 
             type={type}
             placeholder={placeholder}
-            className="border border-gray-300 rounded-md p-2 w-full"
+            className=" border-b-2 border-gray-300 p-2 my-3 w-full"
             name={name}
             id={id}
             onChange={onChange}
