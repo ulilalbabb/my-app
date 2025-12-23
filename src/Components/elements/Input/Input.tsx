@@ -10,7 +10,6 @@ const Input = ( {type, placeholder, name, id, onChange, value}: AuthType) => {
             id={id}
             onChange={onChange}
             value={value}
-            required
         />
     )
 }

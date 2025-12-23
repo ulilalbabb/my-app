@@ -31,7 +31,7 @@ const Navbar = () => {
                 </ul>
             </div>
             <div>
-                <Link href="/login">Login</Link>
+                <Link href="/auth/login">Login</Link>
             </div>
         </nav>
     )
