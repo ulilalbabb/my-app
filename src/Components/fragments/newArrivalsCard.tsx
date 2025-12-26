@@ -27,8 +27,6 @@ const NewArrivalsCard = () => {
         return <p>Loading...</p>;
     }
 
-    console.log(products);
-
     return (
         <div className="flex gap-2">
             {products.map((product) => (
@@ -36,8 +34,8 @@ const NewArrivalsCard = () => {
                 <div className="w-[262] h-[349] hover:border hover:border-green-400 transition duration-300">
                     <div className="flex justify-between items-center p-3">
                         <div>
-                            <p className="font-semibold text-center">NEW</p>
-                            <p className="bg-green-400 px-4 font-semibold text-white rounded-sm">-50%</p>
+                            <p className="font-semibold text-center text-sm">NEW</p>
+                            <p className="bg-green-400 px-4 font-semibold text-white text-sm rounded-sm">-50%</p>
                         </div>
                         <Button variant="bg-white rounded-full p-2 shadow-md">
                             <CiHeart size={20} className="hover:text-green-400"/>
@@ -54,8 +52,8 @@ const NewArrivalsCard = () => {
                     </div>
                 </div>
                 <div>
-                    <p className="font-semibold">{product.product_name}</p>
-                    <p className="font-semibold">{product.price.toLocaleString('en-US', { style: 'currency', currency: 'USD' })}</p>
+                    <p className="font-semibold text-sm">{product.product_name}</p>
+                    <p className="font-semibold text-sm">{product.price.toLocaleString('en-US', { style: 'currency', currency: 'USD' })}</p>
                 </div>
             </div>
             ))}
