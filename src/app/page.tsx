@@ -4,6 +4,7 @@ import MainCard from "@/src/Components/fragments/mainCard";
 import NewArrivalsLayouts from "@/src/Components/layouts/newArrivalLayouts";
 import InformationLayouts from "../Components/layouts/informationLayouts";
 import BannerLayouts from "../Components/layouts/bannerLayouts";
+import ArticleLayouts from "../Components/layouts/articleLayouts";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <NewArrivalsLayouts />
       <InformationLayouts />
       <BannerLayouts />
+      <ArticleLayouts />
     </>
   );
 }

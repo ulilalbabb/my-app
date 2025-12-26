@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "image": "/assets/article-1.png",
+        "title": "How to decorate your room?"
+    },
+    {
+        "id": 2,
+        "image": "/assets/article-2.png",
+        "title": "Kitchen Decorations"
+    },
+    {
+        "id": 3,
+        "image": "/assets/article-3.png",
+        "title": "Bedroom Decorations and Ideas"
+    }
+]
