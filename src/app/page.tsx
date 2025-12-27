@@ -5,6 +5,7 @@ import NewArrivalsLayouts from "@/src/Components/layouts/newArrivalLayouts";
 import InformationLayouts from "../Components/layouts/informationLayouts";
 import BannerLayouts from "../Components/layouts/bannerLayouts";
 import ArticleLayouts from "../Components/layouts/articleLayouts";
+import Footer from "../Components/elements/Footer/Footer";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <InformationLayouts />
       <BannerLayouts />
       <ArticleLayouts />
+      <Footer />
     </>
   );
 }
