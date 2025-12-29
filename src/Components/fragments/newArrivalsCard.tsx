@@ -53,7 +53,7 @@ const NewArrivalsCard = () => {
             <div className="flex gap-2 overflow-x-auto scroll-smooth no-scrollbar" ref={scrollRef}>
                 {products.map((product) => (
                     <div key={product.id}>
-                    <div className="w-[262] h-[349] md:w-[300px] md:h-[400px] hover:border hover:border-green-400 transition duration-300">
+                    <div className="w-[262] h-[349] md:w-[300px] md:h-[400px]">
                         <div className="flex justify-between items-center p-3">
                             <div>
                                 <p className="font-semibold text-center text-sm">NEW</p>
@@ -69,11 +69,12 @@ const NewArrivalsCard = () => {
                                 width={200}
                                 height={200}
                                 alt="product"
+                                className="w-full h-full object-cover hover:scale-105 transition-all duration-300 ease-in-out"
                             />
-                            {/* <Button variant="bg-black text-white">Add to Cart</Button> */}
+                            <Button variant="border border-black hover:bg-black hover:text-white w-3/4 mx-8 rounded-sm">Add to Cart</Button>
                         </div>
                     </div>
-                    <div>
+                    <div className="mt-5">
                         <p className="font-semibold text-sm">{product.product_name}</p>
                         <p className="font-semibold text-sm">{product.price.toLocaleString('en-US', { style: 'currency', currency: 'USD' })}</p>
                     </div>
