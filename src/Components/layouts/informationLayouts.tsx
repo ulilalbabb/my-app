@@ -26,7 +26,7 @@ const InformationLayouts = () => {
                     <h2 className="font-semibold text-sm">Secure Payments</h2>
                     <p className="flex flex-col md:flex-row md:gap-1">
                         <span>Secured</span>
-                        <span>Payment</span>
+                        <span>by Stripe</span>
                     </p>
                 </div>
                 <div className="bg-gray-200 w-[170px] h-[198px] md:w-[180px] md:h-[210px] lg:w-[262px] lg:h-[220px] flex flex-col justify-between py-8 pl-3 md:py-13 md:pl-7">

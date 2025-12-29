@@ -1,5 +1,6 @@
 import Image from "next/image"
 import Button from "../elements/Button/Button"
+import { IoIosArrowRoundForward } from "react-icons/io";
 
 const BannerLayouts = () => {
     return (
@@ -23,9 +24,10 @@ const BannerLayouts = () => {
                 </p>
                 <div>
                     <Button
-                        variant="underline underline-offset-5 decoration-2"
+                        variant="flex items-center underline underline-offset-5 group hover:-translate-y-1 transition-transform duration-300 ease-in-out"
                     >
-                        Shop Now →
+                        Shop Now 
+                        <IoIosArrowRoundForward size={25} className="group-hover:translate-x-1 transition-transform duration-300 ease-in-out" />
                     </Button>
                 </div>
             </div>

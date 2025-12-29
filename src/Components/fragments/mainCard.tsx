@@ -1,7 +1,6 @@
-import card from "@/src/Components/Data/mainCart.json"
 import Image from "next/image";
 import Link from "next/link"
-import { FaArrowRight } from "react-icons/fa6";
+import { IoIosArrowRoundForward } from "react-icons/io";
 
 const MainCard = () => {
     return (
@@ -12,8 +11,9 @@ const MainCard = () => {
                 <h2 className="text-3xl font-semibold">Living Room</h2>
                 <Link
                     href="#"
-                    className="text-sm text-gray-600 flex items-center gap-1 mt-1 hover:underline">
-                        Shop Now →
+                    className="flex items-center pt-2 group underline underline-offset-5 hover:-translate-y-1 transition-transform duration-300 ease-in-out">
+                        Shop Now
+                        <IoIosArrowRoundForward size={25} className="group-hover:translate-x-1 transition-transform duration-300 ease-in-out"/>
                 </Link>
                 <Image 
                     src="/assets/1.png" 
@@ -32,8 +32,9 @@ const MainCard = () => {
                     </h2>
                     <Link
                         href="#"
-                        className="text-sm text-gray-600 flex items-center gap-1 mt-1 hover:underline">
-                            Shop Now →
+                        className="flex items-center pt-2 group underline underline-offset-5 hover:-translate-y-1 transition-transform duration-300 ease-in-out">
+                            Shop Now
+                            <IoIosArrowRoundForward size={25} className="group-hover:translate-x-1 transition-transform duration-300 ease-in-out" />
                     </Link>
                 </div>
                 <Image 
@@ -51,9 +52,10 @@ const MainCard = () => {
                     <h2 className="text-3xl font-semibold">Kitchen</h2>
                     <Link
                         href="#"
-                        className="text-sm text-gray-600 flex items-center gap-1 mt-1 hover:underline"
+                        className="flex items-center pt-2 group underline underline-offset-5 hover:-translate-y-1 transition-transform duration-300 ease-in-out"
                     >
-                        Shop Now →
+                        Shop Now
+                        <IoIosArrowRoundForward size={25} className="group-hover:translate-x-1 transition-transform duration-300 ease-in-out" />
                     </Link>
                 </div>
                 <Image 

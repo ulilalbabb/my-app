@@ -1,5 +1,6 @@
 import Button from "../elements/Button/Button";
 import ArticleCards from "../fragments/articleCards";
+import { IoIosArrowRoundForward } from "react-icons/io";
 
 const ArticleLayouts = () => {
     return (
@@ -9,8 +10,9 @@ const ArticleLayouts = () => {
                     Articles
                 </h1>
                 <Button
-                    variant="underline underline-offset-5 text-sm">
-                        More Articles →
+                    variant="flex items-center group underline underline-offset-5 hover:-translate-y-1 transition-transform duration-300 ease-in-out">
+                        More Articles
+                        <IoIosArrowRoundForward size={25} className="group-hover:translate-x-1 transition-transform duration-300 ease-in-out" />
                 </Button>
             </div>
             <ArticleCards />
