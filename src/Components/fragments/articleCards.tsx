@@ -6,7 +6,7 @@ const ArticleCards = () => {
     return (
         <div className="md:flex md:gap-3">
             {article.map((src, index) => (
-                <div key={index} className="flex flex-col gap-3">
+                <div key={index} className="flex flex-col gap-3 md:justify-between">
                         <Image 
                             src={src.image}
                             width={500}

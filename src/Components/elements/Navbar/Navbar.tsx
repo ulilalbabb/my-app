@@ -12,7 +12,7 @@ const navItems = [
 
 const Navbar = () => {
     return (
-        <nav className="h-18 flex items-center justify-between mx-3 lg:mx-34">
+        <nav className="h-18 flex items-center justify-between mx-3 md:mx-6 lg:mx-34">
             <div>
                 <h1 className="text-2xl">Luminette</h1>
             </div>

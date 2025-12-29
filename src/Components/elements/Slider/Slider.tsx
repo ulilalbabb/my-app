@@ -17,13 +17,13 @@ const HeroSlider = () => {
     } = useCarousel(slider.length)
 
     return (
-        <div className="flex flex-col-reverse w-full px-3">
-            <header className="flex flex-col gap-7 md:flex md:flex-row md:items-center md:justify-between md:px-34">
+        <div className="flex flex-col-reverse w-full px-3 md:px-6">
+            <header className="flex flex-col gap-7 md:flex md:flex-row md:items-center md:justify-between lg:px-34">
                 <div className="pt-9">
-                    <h1 className="text-5xl md:text-7xl">Bright Ideas/</h1>
-                    <h1 className="text-5xl md:text-7xl">Brilliant Results.</h1>
+                    <h1 className="text-5xl md:text-5xl">Bright Ideas/</h1>
+                    <h1 className="text-5xl md:text-5xl">Brilliant Results.</h1>
                 </div>
-                <div>
+                <div className="md:w-1/2">
                     <p>
                         <span className="font-bold">Luminette </span> 
                         is a gift & decorations store based in Malang, Indonesia. Est since 2025. 
@@ -56,20 +56,20 @@ const HeroSlider = () => {
 
                 <Button
                     onClick={prevSlide}
-                    variant="hidden md:flex absolute top-1/2 left-3 -translate-y-1/2 bg-white px-3 py-3 rounded-full hover:bg-gray-200"
+                    variant="hidden md:flex absolute top-1/2 left-0 -translate-y-1/2 bg-white px-3 py-3 rounded-full hover:bg-gray-200"
                 >
                     <FaArrowLeftLong />
                 </Button>
                 <Button
                     onClick={nextSlide}
-                    variant="hidden md:flex absolute top-1/2 right-3 -translate-y-1/2 bg-white px-3 py-3 rounded-full hover:bg-gray-200"
+                    variant="hidden md:flex absolute top-1/2 right-0 -translate-y-1/2 bg-white px-3 py-3 rounded-full hover:bg-gray-200"
                 >
                     <FaArrowRightLong />
                 </Button>
                 
                 {/* dots */}
                 <div 
-                    className="absolute bottom-4 right-33 md:right-135 transform -translate-x-1/2 flex space-x-3 cursor-pointer"
+                    className="absolute bottom-4 right-33 md:right-75 transform -translate-x-1/2 flex space-x-3 cursor-pointer"
                     onClick={nextSlide}>
                         {slider.map((_, index) => (
                             <div

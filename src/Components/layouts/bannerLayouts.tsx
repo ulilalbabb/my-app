@@ -11,7 +11,7 @@ const BannerLayouts = () => {
                         alt="banner"
                         className="w-full md:w-1/2" 
                     />
-            <div className="pl-7 py-10 md:pl-14 md:pt-40 flex flex-col gap-2 md:gap-5">
+            <div className="pl-7 py-10 md:pl-14 md:pt-20 flex flex-col gap-2 md:gap-5">
                 <h1 className="text-blue-500 font-bold">
                     SALE UP TO 50% OFF
                 </h1>
