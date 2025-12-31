@@ -6,35 +6,50 @@ import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { toast, ToastContainer } from "react-toastify";
+import { getSupabaseBrowserClient } from "@/src/lib/supabase/browser-client";
 
 const FormLogin = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const router = useRouter();
+  const supabase = getSupabaseBrowserClient();
 
-  const handleLogin = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    const dataUser = JSON.parse(localStorage.getItem("user") as string);
+    const { data } = await supabase.auth.signInWithPassword({ 
+      email, password 
+    });
 
-    if (dataUser) {
-      if (dataUser.email === email && dataUser.password === password) {
-        localStorage.setItem("isLogin", "true");
+    if (!email || !password) {
+            return toast.error('Please fill in all fields', {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+            });
+        }
+
+    if (data.user) {
+      setTimeout(() => {
         router.push("/");
-      } else {
-        toast.error("Email or password is incorrect", {
-          position: "top-right",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "light",
-        });
-      }
+      }, 1000);
+      toast.success("Login successful", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
     } else {
-      toast.error("Please register first", {
+      toast.error("Email or password is incorrect", {
         position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
@@ -48,7 +63,7 @@ const FormLogin = () => {
   };
 
   return (
-    <form onSubmit={handleLogin}>
+    <form onSubmit={handleSubmit}>
       <ToastContainer />
       <p>
         Don't have an account?{" "}
