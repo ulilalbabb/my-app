@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useState, useRef } from "react";
-import { supabase } from "@/src/lib/supabase/init";
+import { getSupabaseBrowserClient } from "@/src/lib/supabase/browser-client";
 import { CiHeart } from "react-icons/ci";
 import { ProductType } from "@/src/types/product.type";
 import Image from "next/image";
@@ -11,6 +11,7 @@ import { FaArrowRight, FaArrowLeft } from "react-icons/fa6";
 const NewArrivalsCard = () => {
     const [products, setProducts] = useState<ProductType[]>([]);
     const scrollRef = useRef<HTMLDivElement>(null);
+    const supabase = getSupabaseBrowserClient()
 
     const scrollLeft = () => {
         scrollRef.current?.scrollBy({
