@@ -7,12 +7,24 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { toast, ToastContainer } from "react-toastify";
 import { getSupabaseBrowserClient } from "@/src/lib/supabase/browser-client";
+import { FcGoogle } from "react-icons/fc";
 
 const FormLogin = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const router = useRouter();
   const supabase = getSupabaseBrowserClient();
+
+  const handleGoogleLogin = async () => {
+    const { error } = await supabase.auth.signInWithOAuth({
+      provider: "google",
+    });
+    if (error) {
+      return toast.error(error.message);
+    }
+  };
+
+
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -94,6 +106,13 @@ const FormLogin = () => {
         type="submit"
       >
           Sign In
+      </Button>
+      <Button
+        variant="w-full border rounded-xl py-2 flex items-center justify-center gap-2 mt-5 hover:bg-gray-100"
+        type="submit"
+        onClick={handleGoogleLogin}>
+          <FcGoogle size={20}/>
+          Daftar dengan Google
       </Button>
     </form>
   );
